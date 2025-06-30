@@ -1,0 +1,88 @@
+/* Full-page background wrapper */
+.login-background {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20220522/pngtree-delivery-food-service-concept-image_1379898.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Login card */
+.auth-container {
+  max-width: 400px;
+  width: 90%;
+  padding: 30px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: black;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  backdrop-filter: blur(6px);
+}
+
+.auth-container h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #00bcd4;
+}
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.auth-container input {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: white;
+  color: black;
+}
+
+.auth-container input:focus {
+  outline: 2px solid #00bcd4;
+}
+
+.auth-container button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-container button:hover {
+  background-color: #0097a7;
+}
+
+.auth-container hr {
+  border: none;
+  border-top: 1px solid #444;
+}
+
+.auth-container p {
+  margin-top: 20px;
+}
+
+.auth-container a {
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+.auth-container a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+  .auth-container {
+    margin: 20px;
+  }
+}

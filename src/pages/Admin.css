@@ -1,0 +1,218 @@
+/* Background image & container */
+.admin-container {
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('https://img.freepik.com/free-vector/gradient-style-network-connection-background_23-2148879891.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #eee;
+  overflow-y: auto;
+  /* add subtle dark overlay to improve text visibility */
+  position: relative;
+}
+
+.admin-container::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(20, 20, 30, 0.75); /* dark translucent overlay */
+  z-index: 0;
+}
+
+/* Make sure content is above overlay */
+.admin-container > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Headings */
+.admin-container h2 {
+  color: #a8dadc; /* softer light blue */
+  font-weight: 700;
+  font-size: 2.4rem;
+  margin-bottom: 30px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0 0 8px rgba(168, 218, 220, 0.6);
+}
+
+/* Forms */
+.admin-login-form,
+.admin-form {
+  background: rgba(30, 30, 45, 0.85);
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.9);
+  width: 100%;
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  transition: transform 0.3s ease;
+  color: #ddd;
+  font-weight: 500;
+}
+
+.admin-login-form:hover,
+.admin-form:hover {
+  transform: translateY(-5px);
+}
+
+/* Inputs and textarea */
+.admin-login-form input,
+.admin-form input,
+.admin-form textarea {
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 2px solid #555;
+  box-sizing: border-box;
+  color: #eee;
+  background: #222;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.admin-form textarea {
+  min-height: 120px;
+  resize: vertical;
+  font-family: inherit;
+  line-height: 1.5;
+}
+
+.admin-login-form input:focus,
+.admin-form input:focus,
+.admin-form textarea:focus {
+  border-color: #70c1b3; /* soft teal */
+  outline: none;
+  box-shadow: 0 0 12px rgba(112, 193, 179, 0.8);
+  background: #2a2a3d;
+}
+
+.admin-login-form input::placeholder,
+.admin-form input::placeholder,
+.admin-form textarea::placeholder {
+  color: #999;
+}
+
+/* Checkbox label */
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  color: #a8dadc;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #70c1b3;
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  transition: all 0.3s ease;
+  color: #222;
+  background: linear-gradient(90deg, #70c1b3, #40916c);
+  box-shadow: 0 4px 14px rgba(112, 193, 179, 0.7);
+}
+
+button:hover {
+  background: linear-gradient(90deg, #40916c, #70c1b3);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(64, 145, 108, 0.9);
+}
+
+/* Logout button */
+button.logout-btn {
+  max-width: 180px;
+  margin-bottom: 30px;
+  background: linear-gradient(90deg, #f94144, #d90429);
+  box-shadow: 0 4px 12px rgba(249, 65, 68, 0.7);
+  color: #fff;
+  font-weight: 700;
+}
+
+button.logout-btn:hover {
+  background: linear-gradient(90deg, #d90429, #f94144);
+  box-shadow: 0 6px 18px rgba(249, 65, 68, 1);
+}
+
+/* Success & Error messages */
+.success-message,
+.error-message {
+  width: 100%;
+  max-width: 550px;
+  padding: 18px 24px;
+  border-radius: 15px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 28px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.8);
+  animation: slideIn 0.4s ease forwards;
+  font-size: 1.1rem;
+}
+
+.success-message {
+  background: linear-gradient(90deg, #52b788, #2d6a4f);
+  color: #d7f5e9;
+  text-shadow: 0 0 5px rgba(45, 106, 79, 0.8);
+}
+
+.error-message {
+  background: linear-gradient(90deg, #ef233c, #9d0208);
+  color: #f8d7da;
+  text-shadow: 0 0 5px rgba(157, 2, 8, 0.8);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-container {
+    padding: 30px 15px;
+  }
+
+  .admin-login-form,
+  .admin-form {
+    padding: 30px 20px;
+    gap: 18px;
+  }
+
+  .admin-container h2 {
+    font-size: 2rem;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}

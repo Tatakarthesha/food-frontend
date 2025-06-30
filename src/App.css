@@ -1,0 +1,43 @@
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+  background-color: #f8fafc;
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  min-height: calc(100vh - 126px); /* Navbar (70px) + Categories (56px) */
+  padding-top: 126px; /* Same as min-height calculation */
+}
+
+/* Remove margin-top when navbar is hidden */
+.main-content.no-navbar {
+  margin-top: 0;
+  padding-top: 0;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow-x: hidden;
+  background-color: #f8fafc;
+}
+
+/* Remove unused styles */
+.logo, .logo:hover, .logo.react:hover,
+@keyframes logo-spin, @media (prefers-reduced-motion: no-preference),
+.card, .read-the-docs {
+  display: none;
+}
