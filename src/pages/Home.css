@@ -152,6 +152,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 0.5rem;
   padding-top: 1.25rem;
   border-top: 1px solid var(--border-color);
 }
@@ -168,7 +169,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.5rem 1.25rem;
+  padding: 0.5rem 0.5rem;
   height: 38px;
   border: none;
   border-radius: 19px;
@@ -178,6 +179,7 @@
   font-weight: 500;
   cursor: pointer;
   transition: var(--transition);
+  width: 50%;
 }
 
 .add-cart-btn:hover {

@@ -26,7 +26,7 @@ const Home = ({ initialSearchTerm = '', initialCategory = 'All' }) => {
     try {
       setLoading(true);
       setError(null);
-      const response = await fetch('http://localhost:4000/api/foods');
+      const response = await fetch('https://food-backend-cckp.onrender.com/api/foods');
       
       if (!response.ok) {
         throw new Error(`Failed to fetch foods: ${response.statusText}`);
